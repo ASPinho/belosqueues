@@ -50,19 +50,19 @@ public class KeyboardController implements KeyboardHandler {
         switch (event.getKey()){
             //move Up
             case KeyboardEvent.KEY_W:
-
+                game.movePlayer(MoveDirections.UP);
                 break;
             //move Down
             case KeyboardEvent.KEY_S:
-
+                game.movePlayer(MoveDirections.DOWN);
                 break;
             //move Left
             case KeyboardEvent.KEY_A:
-
+                game.movePlayer(MoveDirections.LEFT);
                 break;
             //move Right
             case KeyboardEvent.KEY_D:
-
+                game.movePlayer(MoveDirections.RIGHT);
                 break;
             //quit for test efficiency
             case KeyboardEvent.KEY_Q:
@@ -74,4 +74,12 @@ public class KeyboardController implements KeyboardHandler {
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
     }
+
+    public enum MoveDirections{
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT,
+    }
+
 }
