@@ -14,8 +14,17 @@ public class Position {
     public int getCol() {
         return col;
     }
+
     public int getRow() {
         return row;
+    }
+
+    public void moveCol(int dif){
+        col += dif;
+    }
+
+    public void moveRow(int dif){
+        row += dif;
     }
 
     @Override
