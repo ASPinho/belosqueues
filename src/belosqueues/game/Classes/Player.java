@@ -5,6 +5,7 @@ import belosqueues.game.components.Position;
 import belosqueues.game.entities.Enemy;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
+
 public abstract class Player {
 
     //graphic && logic representation
