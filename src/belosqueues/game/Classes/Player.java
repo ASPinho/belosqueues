@@ -54,7 +54,30 @@ public abstract class Player {
     }
 
     public enum PlayerClasses {
-        WARLOCK,
-        WARRIOR,
+        WARLOCK(170,20,200),
+        WARRIOR(250,100,50);
+
+        private final int stamina;
+        private final int strength;
+        private final int intellect;
+
+        PlayerClasses(int stamina,int strength,int intellect) {
+            this.stamina = stamina;
+            this.strength = strength;
+            this.intellect = intellect;
+        }
+
+        public int getStamina(){
+            return stamina;
+        }
+
+        public int getStrength() {
+            return strength;
+        }
+
+        public int getIntellect() {
+            return intellect;
+        }
+
     }
 }
