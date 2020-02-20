@@ -7,7 +7,7 @@ public class Warlock extends Player {
     //base atributes of this class
 
     public Warlock(PlayerClasses playerClasses){
-        super(playerClasses.getStamina(), playerClasses.getStrength(),playerClasses.getIntellect());
+        super(playerClasses.getStamina(), playerClasses.getStrength(), playerClasses.getIntellect());
     }
 
     @Override
