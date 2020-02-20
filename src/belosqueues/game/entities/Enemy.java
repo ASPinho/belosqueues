@@ -1,4 +1,15 @@
 package belosqueues.game.entities;
 
-public class Enemy {
+import belosqueues.game.components.Position;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
+public abstract class Enemy {
+
+    //graphic && logic representation
+    protected Rectangle enemy;
+    protected Position pos;
+
+    //Player attributes
+
+
 }

@@ -57,26 +57,26 @@ public abstract class Player {
         WARLOCK(170, 20, 200),
         WARRIOR(250, 100, 50);
 
-        private final int STAMINA;
-        private final int STRENGTH;
-        private final int INTELLECT;
+        private final int stamina;
+        private final int strength;
+        private final int intellect;
 
         PlayerClasses(int stamina, int strength, int intellect){
-            STAMINA = stamina;
-            STRENGTH = strength;
-            INTELLECT = intellect;
+            this.stamina = stamina;
+            this.strength = strength;
+            this.intellect = intellect;
         }
 
-        public int getSTAMINA() {
-            return STAMINA;
+        public int getStamina() {
+            return stamina;
         }
 
-        public int getSTRENGTH() {
-            return STRENGTH;
+        public int getStrength() {
+            return strength;
         }
 
-        public int getINTELLECT() {
-            return INTELLECT;
+        public int getIntellect() {
+            return intellect;
         }
     }
 }

@@ -7,7 +7,7 @@ public class Warrior extends Player {
     //base atributes of this class
 
     public Warrior(PlayerClasses playerClasses){
-        super(playerClasses.getSTAMINA(), playerClasses.getSTRENGTH(), playerClasses.getINTELLECT());
+        super(playerClasses.getStamina(), playerClasses.getStrength(), playerClasses.getIntellect());
     }
 
     @Override
