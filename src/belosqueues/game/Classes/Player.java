@@ -5,6 +5,7 @@ import belosqueues.game.components.Position;
 import belosqueues.game.entities.Enemy;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
+
 public abstract class Player {
 
     //graphic && logic representation
@@ -62,10 +63,12 @@ public abstract class Player {
         private final int intellect;
 
         PlayerClasses(int stamina, int strength, int intellect){
+          
             this.stamina = stamina;
             this.strength = strength;
             this.intellect = intellect;
         }
+
 
         public int getStamina() {
             return stamina;
