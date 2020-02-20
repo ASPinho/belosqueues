@@ -1,5 +1,6 @@
 package belosqueues.game.entities;
 
+
 import belosqueues.game.Game;
 import belosqueues.game.components.Position;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
