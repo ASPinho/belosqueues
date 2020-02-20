@@ -26,19 +26,27 @@ public class Game {
         switch (direction){
 
             case UP:
-                player.moveUp();
+                if(player.getPos().getRow() > 0) {
+                    player.moveUp();
+                }
                 break;
 
             case DOWN:
-                player.moveDown();
+                if(player.getPos().getRow() < HEIGHT - 1 ) {
+                    player.moveDown();
+                }
                 break;
 
             case LEFT:
-                player.moveLeft();
+                if (player.getPos().getCol() > 0) {
+                    player.moveLeft();
+                }
                 break;
 
             case RIGHT:
-                player.moveRight();
+                if (player.getPos().getCol() < WIDTH - 1) {
+                    player.moveRight();
+                }
                 break;
         }
 
