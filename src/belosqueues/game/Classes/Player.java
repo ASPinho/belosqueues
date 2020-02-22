@@ -4,6 +4,7 @@ import belosqueues.game.Game;
 import belosqueues.game.components.Position;
 import belosqueues.game.entities.Enemy;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 
 public abstract class Player {
@@ -18,6 +19,7 @@ public abstract class Player {
     protected int intellect;
     protected int armor;
     protected int experience;
+    protected Picture warlockPic;
 
     public Player(int stamina, int strength, int intellect){
         this.stamina = stamina;
@@ -26,6 +28,9 @@ public abstract class Player {
         pos = new Position(5, 15);
         player = new Rectangle(Game.PADDING + pos.getCol() * Game.CELLSIZE, Game.PADDING + pos.getRow() * Game.CELLSIZE, Game.CELLSIZE, Game.CELLSIZE);
         player.fill();
+
+        //warlockPic = new Picture(player.getX(), player.getY(), "/Users/codecadet/Documents/AndreGoncalves/dev/outside-projects/belosqueues/resources/images/knight-left.png");
+        //warlockPic.draw();
     }
 
     public void moveUp(){
@@ -46,6 +51,10 @@ public abstract class Player {
     public void moveRight(){
         pos.moveCol(1);
         player.translate(Game.CELLSIZE, 0);
+    }
+
+    public int getStamina() {
+        return stamina;
     }
 
     public abstract void attack(Enemy enemy);

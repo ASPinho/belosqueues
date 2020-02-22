@@ -4,6 +4,7 @@ import belosqueues.game.Classes.Player;
 import belosqueues.game.Classes.PlayerFactory;
 import belosqueues.game.entities.Enemy;
 import belosqueues.game.entities.EnemyFactory;
+import belosqueues.game.stages.Arena;
 import belosqueues.game.stages.Stage;
 import belosqueues.game.stages.Tutorial;
 
@@ -17,6 +18,7 @@ public class Game {
     private Stage tutorial;
     private Player player;
     private Enemy enemy;
+    private Arena arena;
 
 
     public Game(Player.PlayerClasses playerClasses) {
@@ -29,14 +31,26 @@ public class Game {
 
     public void gameFlow(){
 
+        System.out.println(player.getPos().getCol());
+        System.out.println(enemy.getPos().getCol());
+        System.out.println(player.getPos().getRow());
+        System.out.println(enemy.getPos().getRow());
+
+        if ((player.getPos().getCol() == enemy.getPos().getCol()) && (player.getPos().getRow() == enemy.getPos().getRow())){
+            System.out.println("Battle");
+            arena.startBattle();
+        }
+
         while(!player.getPos().equals(enemy.getPos())) {
             moveEnemy();
             try {
-                Thread.sleep(2000);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
+
     }
 
     public void movePlayer(KeyboardController.MoveDirections direction){

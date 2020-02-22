@@ -1,6 +1,7 @@
 package belosqueues.game.Classes;
 
 import belosqueues.game.entities.Enemy;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Warlock extends Player {
 
