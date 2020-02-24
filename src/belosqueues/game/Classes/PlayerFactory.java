@@ -16,7 +16,7 @@ public class PlayerFactory {
                 player = new Warrior();
                 break;
         }
-        
+
        return player;
 
     }
