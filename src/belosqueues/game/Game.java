@@ -92,18 +92,18 @@ public class Game {
         int difRow = player.getPos().getRow() - enemy.getPos().getRow();
 
         //move up
-        distance[0] = (int) Math.sqrt(Math.pow(difCol,2) + Math.pow((difRow - 1),2));
+        distance[0] = (int) Math.hypot(difCol, difRow - 1);
 
         //move down
-        distance[1] = (int) Math.sqrt(Math.pow(difCol,2) + Math.pow((difRow + 1),2));
+        distance[1] = (int) Math.hypot(difCol, difRow + 1);
 
         //move left
-        distance[2] = (int) Math.sqrt(Math.pow((difCol-1),2) + Math.pow(difRow,2));
+        distance[2] = (int) Math.hypot(difCol - 1, difRow);
 
         //move right
-        distance[3] = (int) Math.sqrt(Math.pow((difCol+1),2) + Math.pow(difRow,2));
+        distance[3] = (int) Math.hypot(difCol + 1, difRow);;
 
-        int min = (int) Math.sqrt(Math.pow(difCol,2) - Math.pow(difRow,2));
+        int min = (int) Math.hypot(difCol, difRow);
 
         for (int i = 1; i <distance.length ; i++) {
             if (distance[i] > min){
