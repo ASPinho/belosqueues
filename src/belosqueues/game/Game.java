@@ -46,7 +46,7 @@ public class Game {
         System.out.println(player.getPos().getRow());
         System.out.println(enemy.getPos().getRow());
 
-        if ((player.getPos().getCol() == enemy.getPos().getCol()) && (player.getPos().getRow() == enemy.getPos().getRow())){
+        if (player.getPos().equals(enemy.getPos())){
             System.out.println("Battle");
             arena.startBattle();
         }

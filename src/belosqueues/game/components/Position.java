@@ -20,11 +20,11 @@ public class Position {
     }
 
     public void moveCol(int dif){
-        this.col += dif;
+        col += dif;
     }
 
     public void moveRow(int dif){
-        this.row += dif;
+        row += dif;
     }
 
     @Override
