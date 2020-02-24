@@ -1,6 +1,6 @@
 package belosqueues.game;
 
-import belosqueues.game.Classes.Player;
+import belosqueues.game.player.Player;
 
 public class Main {
 

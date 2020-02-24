@@ -1,4 +1,4 @@
-package belosqueues.game.Classes;
+package belosqueues.game.player;
 
 public class PlayerFactory {
 

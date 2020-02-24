@@ -1,12 +1,10 @@
-package belosqueues.game.Classes;
+package belosqueues.game.player;
 
-import belosqueues.game.Game;
+import static belosqueues.game.Game.*;
 import belosqueues.game.components.Position;
-import belosqueues.game.entities.Enemy;
+import belosqueues.game.enemies.Enemy;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
-
-import java.awt.*;
 
 
 public abstract class Player {
@@ -28,7 +26,7 @@ public abstract class Player {
         strength = playerClass.strength;
         intellect = playerClass.intellect;
         pos = new Position(5, 15);
-        player = new Rectangle(Game.PADDING + pos.getCol() * Game.CELLSIZE, Game.PADDING + pos.getRow() * Game.CELLSIZE, Game.CELLSIZE, Game.CELLSIZE);
+        player = new Rectangle(PADDING + pos.getCol() * CELLSIZE, PADDING + pos.getRow() * CELLSIZE, CELLSIZE, CELLSIZE);
         player.fill();
 
         //warlockPic = new Picture(player.getX(), player.getY(), "/Users/codecadet/Documents/AndreGoncalves/dev/outside-projects/belosqueues/resources/images/knight-left.png");
@@ -37,22 +35,22 @@ public abstract class Player {
 
     public void moveUp(){
         pos.moveRow(-1);
-        player.translate(0, -Game.CELLSIZE);
+        player.translate(0, -CELLSIZE);
     }
 
     public void moveDown(){
         pos.moveRow(1);
-        player.translate(0, Game.CELLSIZE);
+        player.translate(0, CELLSIZE);
     }
 
     public void moveLeft(){
         pos.moveCol(-1);
-        player.translate( -Game.CELLSIZE, 0);
+        player.translate( -CELLSIZE, 0);
     }
 
     public void moveRight(){
         pos.moveCol(1);
-        player.translate(Game.CELLSIZE, 0);
+        player.translate(CELLSIZE, 0);
     }
 
     public int getStamina() {
