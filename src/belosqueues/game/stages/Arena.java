@@ -13,7 +13,10 @@ public class Arena {
 
     private int attack = 30;
 
-    public Arena(){
+    public Arena(Player player, Enemy enemy){
+
+        this.player = player;
+        this.enemy = enemy;
 
     }
 
@@ -35,9 +38,10 @@ public class Arena {
             System.out.println("Enemy died");
         }
 
-        while (player.getStamina() != 0 || enemy.getStamina() != 0) {
+        while (player.getStamina() > 0 && enemy.getStamina() > 0) {
 
-            int attackTurn = (int) Math.random() * 2;
+            int attackTurn = (int) Math.ceil(Math.random() * 2);
+            System.out.println("attackTurn = " + attackTurn);
 
             int attackT = (attackTurn == 1) ? attackPlayer() : attackEnemy();
 
@@ -48,11 +52,19 @@ public class Arena {
 
     public int attackEnemy(){
 
+        enemy.setStamina(attack);
+        System.out.println("Enemy lost " + attack + " Stamina.\nCurrent Stamina: " + enemy.getStamina() + "\n");
+
+
+
        return enemy.getStamina() - attack;
 
     }
 
     public int attackPlayer(){
+
+        player.setStamina(attack);
+        System.out.println("Player lost " + attack + " Stamina.\nCurrent Stamina: " + player.getStamina() + "\n");
 
         return player.getStamina() - attack;
 

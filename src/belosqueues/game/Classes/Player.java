@@ -59,6 +59,11 @@ public abstract class Player {
         return stamina;
     }
 
+    public void setStamina(int staminaRemoved) {
+
+        stamina -= staminaRemoved;
+    }
+
     public abstract void attack(Enemy enemy);
 
     public Position getPos() {
