@@ -60,6 +60,10 @@ public abstract class Enemy {
         return stamina;
     }
 
+    public void setStamina(int staminaRemoved) {
+        stamina -= staminaRemoved;
+    }
+
     public enum EnemyClasses {
         VOLDEMORT(300, 50,500),
         BIGTITS(200,300,0);
