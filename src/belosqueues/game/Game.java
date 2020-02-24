@@ -18,14 +18,14 @@ public class Game {
     private Stage tutorial;
     private Player player;
     private Enemy enemy;
-    private Arena arena = new Arena();
+    private Arena arena;
 
 
     public Game(Player.PlayerClasses playerClasses) {
         tutorialInit();
         player = PlayerFactory.newPlayer(playerClasses);
         enemy = EnemyFactory.newEnemy();
-
+        arena = new Arena(player, enemy);
         gameFlow();
     }
 

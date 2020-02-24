@@ -9,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Game master = new Game(Player.PlayerClasses.WARLOCK);
+        Game master = new Game(Player.PlayerClasses.WARLOCK);
 
-        //KeyboardController kb = new KeyboardController(master);
+        KeyboardController kb = new KeyboardController(master);
 
         Arena arena = new Arena(PlayerFactory.newPlayer(Player.PlayerClasses.WARRIOR), EnemyFactory.newEnemy());
         arena.startBattle();
