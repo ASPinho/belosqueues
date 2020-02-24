@@ -21,10 +21,10 @@ public abstract class Player {
     protected int experience;
     protected Picture warlockPic;
 
-    public Player(int stamina, int strength, int intellect){
-        this.stamina = stamina;
-        this.strength = strength;
-        this.intellect = intellect;
+    public Player(PlayerClasses playerClass){
+        stamina = playerClass.stamina;
+        strength = playerClass.strength;
+        intellect = playerClass.intellect;
         pos = new Position(5, 15);
         player = new Rectangle(Game.PADDING + pos.getCol() * Game.CELLSIZE, Game.PADDING + pos.getRow() * Game.CELLSIZE, Game.CELLSIZE, Game.CELLSIZE);
         player.fill();
