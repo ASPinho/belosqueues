@@ -55,6 +55,10 @@ public abstract class Enemy {
         return pos;
     }
 
+    public int getStamina() {
+        return stamina;
+    }
+
     public enum EnemyClasses {
         VOLDEMORT(300, 50,500),
         BIGTITS(200,300,0);
