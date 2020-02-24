@@ -1,10 +1,8 @@
-package belosqueues.game.Classes;
+package belosqueues.game.player;
 
-import belosqueues.game.entities.Enemy;
+import belosqueues.game.enemies.Enemy;
 
 public class Warrior extends Player {
-
-    //base atributes of this class
 
     public Warrior(){
         super(PlayerClasses.WARRIOR);

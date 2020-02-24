@@ -1,9 +1,7 @@
 package belosqueues.game.stages;
 
-import belosqueues.game.Classes.Player;
-import belosqueues.game.Classes.PlayerFactory;
-import belosqueues.game.entities.Enemy;
-import belosqueues.game.entities.EnemyFactory;
+import belosqueues.game.player.Player;
+import belosqueues.game.enemies.Enemy;
 
 public class Arena {
 

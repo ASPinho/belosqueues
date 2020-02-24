@@ -1,10 +1,11 @@
-package belosqueues.game.entities;
+package belosqueues.game.enemies;
 
 
-import belosqueues.game.Game;
+import static belosqueues.game.Game.*;
 import belosqueues.game.components.Position;
 import org.academiadecodigo.simplegraphics.graphics.Color;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
 
 public abstract class Enemy {
 
@@ -17,12 +18,12 @@ public abstract class Enemy {
     protected int strength;
     protected int intellect;
 
-    public Enemy (int stamina, int strength, int intellect){
-        this.stamina = stamina;
-        this.strength = strength;
-        this.intellect = intellect;
+    public Enemy (EnemyClasses enemyClass){
+        stamina = enemyClass.stamina;
+        strength = enemyClass.strength;
+        intellect = enemyClass.intellect;
         pos = new Position(10,4);
-        enemy = new Rectangle(Game.PADDING + pos.getCol() * Game.CELLSIZE, Game.PADDING + pos.getRow() * Game.CELLSIZE, Game.CELLSIZE, Game.CELLSIZE);
+        enemy = new Rectangle(PADDING + pos.getCol() * CELLSIZE, PADDING + pos.getRow() * CELLSIZE, CELLSIZE, CELLSIZE);
         enemy.setColor(Color.RED);
         enemy.fill();
     }
@@ -33,22 +34,22 @@ public abstract class Enemy {
 
     public void moveUp(){
         pos.moveRow(-1);
-        enemy.translate(0, -Game.CELLSIZE);
+        enemy.translate(0, -CELLSIZE);
     }
 
     public void moveDown(){
         pos.moveRow(1);
-        enemy.translate(0, Game.CELLSIZE);
+        enemy.translate(0, CELLSIZE);
     }
 
     public void moveLeft(){
         pos.moveCol(-1);
-        enemy.translate( -Game.CELLSIZE, 0);
+        enemy.translate( -CELLSIZE, 0);
     }
 
     public void moveRight(){
         pos.moveCol(1);
-        enemy.translate(Game.CELLSIZE, 0);
+        enemy.translate(CELLSIZE, 0);
     }
 
     public Position getPos() {
