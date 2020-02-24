@@ -6,6 +6,8 @@ import belosqueues.game.entities.Enemy;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
+import java.awt.*;
+
 
 public abstract class Player {
 
