@@ -3,6 +3,7 @@ package belosqueues.game.player;
 import static belosqueues.game.Game.*;
 import belosqueues.game.components.Position;
 import belosqueues.game.enemies.Enemy;
+import belosqueues.game.equipments.Equipment;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
@@ -20,6 +21,13 @@ public abstract class Player {
     protected int armor;
     protected int experience;
     protected Picture warlockPic;
+
+    //Player equipments
+    protected Equipment helm;
+    protected Equipment chest;
+    protected Equipment gloves;
+    protected Equipment pants;
+    protected Equipment boots;
 
     public Player(PlayerClasses playerClass){
         stamina = playerClass.stamina;
