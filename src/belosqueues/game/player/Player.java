@@ -4,6 +4,19 @@ import static belosqueues.game.Game.*;
 import belosqueues.game.components.Position;
 import belosqueues.game.enemies.Enemy;
 import belosqueues.game.equipments.Equipment;
+import belosqueues.game.equipments.boots.Boots;
+import belosqueues.game.equipments.boots.StarterBoots;
+import belosqueues.game.equipments.chest.Chest;
+import belosqueues.game.equipments.chest.StarterChest;
+import belosqueues.game.equipments.gloves.Gloves;
+import belosqueues.game.equipments.gloves.StarterGloves;
+import belosqueues.game.equipments.helm.Helm;
+import belosqueues.game.equipments.helm.StarterHelm;
+import belosqueues.game.equipments.pants.Pants;
+import belosqueues.game.equipments.pants.StarterPants;
+import belosqueues.game.equipments.staves.StarterStaff;
+import belosqueues.game.equipments.swords.StarterSword;
+import belosqueues.game.equipments.swords.Sword;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
@@ -23,22 +36,54 @@ public abstract class Player {
     protected Picture warlockPic;
 
     //Player equipments
-    protected Equipment helm;
-    protected Equipment chest;
-    protected Equipment gloves;
-    protected Equipment pants;
-    protected Equipment boots;
+    protected Equipment helm = new StarterHelm();
+    protected Equipment chest = new StarterChest();
+    protected Equipment gloves = new StarterGloves();
+    protected Equipment pants = new StarterPants();
+    protected Equipment boots = new StarterBoots();
+    protected Equipment weapon;
 
     public Player(PlayerClasses playerClass){
         stamina = playerClass.stamina;
         strength = playerClass.strength;
         intellect = playerClass.intellect;
+        weapon = playerClass.weapon;
         pos = new Position(5, 15);
         player = new Rectangle(PADDING + pos.getCol() * CELLSIZE, PADDING + pos.getRow() * CELLSIZE, CELLSIZE, CELLSIZE);
         player.fill();
 
         //warlockPic = new Picture(player.getX(), player.getY(), "/Users/codecadet/Documents/AndreGoncalves/dev/outside-projects/belosqueues/resources/images/knight-left.png");
         //warlockPic.draw();
+    }
+
+    public void equip(Equipment equipment) {
+
+        switch (equipment.getType()) {
+
+            case BOOTS:
+                boots = new Boots(boots);
+                break;
+
+            case CHEST:
+                chest = new Chest(chest);
+                break;
+
+            case GLOVES:
+                gloves = new Gloves(gloves);
+                break;
+
+            case HELM:
+                helm = new Helm(helm);
+                break;
+
+            case PANTS:
+                pants = new Pants(pants);
+                break;
+
+            case WEAPON:
+                weapon = new Sword(weapon);
+                break;
+        }
     }
 
     public void moveUp(){
@@ -77,18 +122,20 @@ public abstract class Player {
     }
 
     public enum PlayerClasses {
-        WARLOCK(170, 20, 200),
-        WARRIOR(250, 100, 50);
+        WARLOCK(170, 20, 200, new StarterStaff()),
+        WARRIOR(250, 100, 50, new StarterSword());
 
         private final int stamina;
         private final int strength;
         private final int intellect;
+        private final Equipment weapon;
 
-        PlayerClasses(int stamina, int strength, int intellect){
+        PlayerClasses(int stamina, int strength, int intellect, Equipment weapon){
           
             this.stamina = stamina;
             this.strength = strength;
             this.intellect = intellect;
+            this.weapon = weapon;
         }
 
 

@@ -28,4 +28,9 @@ public class Helm extends EquipmentDecorator {
     public int getArmor() {
         return 0;
     }
+
+    @Override
+    public Type getType() {
+        return Type.HELM;
+    }
 }

@@ -21,6 +21,11 @@ public class StarterHelm implements Equipment {
 
     @Override
     public int getArmor() {
-        return 0;
+        return 20;
+    }
+
+    @Override
+    public Type getType() {
+        return Type.HELM;
     }
 }

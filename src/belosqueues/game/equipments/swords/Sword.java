@@ -28,4 +28,11 @@ public class Sword extends EquipmentDecorator {
     public int getArmor() {
         return 0;
     }
+
+    @Override
+    public Type getType() {
+        return Type.WEAPON;
+    }
+
+
 }
