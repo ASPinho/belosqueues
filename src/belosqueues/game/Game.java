@@ -1,5 +1,7 @@
 package belosqueues.game;
 
+import belosqueues.game.equipments.Equipment;
+import belosqueues.game.equipments.helm.Helm;
 import belosqueues.game.player.Player;
 import belosqueues.game.player.PlayerFactory;
 import belosqueues.game.enemies.Enemy;
@@ -38,7 +40,6 @@ public class Game {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         }
 
         System.out.println(player.getPos().getCol());
