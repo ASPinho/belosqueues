@@ -10,4 +10,15 @@ public interface Equipment {
 
     public abstract int getArmor();
 
+    public abstract Type getType();
+
+    public enum Type{
+        BOOTS,
+        CHEST,
+        GLOVES,
+        HELM,
+        PANTS,
+        WEAPON,
+    }
+
 }

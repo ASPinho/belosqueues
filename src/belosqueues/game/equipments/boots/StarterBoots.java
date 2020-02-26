@@ -21,6 +21,11 @@ public class StarterBoots implements Equipment {
 
     @Override
     public int getArmor() {
-        return 0;
+        return 10;
+    }
+
+    @Override
+    public Type getType() {
+        return Type.BOOTS;
     }
 }

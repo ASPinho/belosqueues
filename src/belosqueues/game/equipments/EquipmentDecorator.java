@@ -8,8 +8,4 @@ public abstract class EquipmentDecorator implements Equipment{
         this.equipment = equipment;
     }
 
-
-
-
-
 }
