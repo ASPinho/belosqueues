@@ -61,30 +61,32 @@ public abstract class Player {
         switch (equipment.getType()) {
 
             case BOOTS:
-                boots = new Boots(boots);
+                boots = equipment;
                 break;
 
             case CHEST:
-                chest = new Chest(chest);
+                chest = equipment;
                 break;
 
             case GLOVES:
-                gloves = new Gloves(gloves);
+                gloves = equipment;
                 break;
 
             case HELM:
-                helm = new Helm(helm);
+                helm = equipment;
                 break;
 
             case PANTS:
-                pants = new Pants(pants);
+                pants = equipment;
                 break;
 
             case WEAPON:
-                weapon = new Sword(weapon);
+                weapon = equipment;
                 break;
         }
     }
+
+
 
     public void moveUp(){
         pos.moveRow(-1);
@@ -108,6 +110,41 @@ public abstract class Player {
 
     public int getStamina() {
         return stamina;
+    }
+
+    public Equipment getEquipment(Equipment.Type type){
+
+        Equipment equipment = null;
+
+        switch (type){
+
+            case BOOTS:
+                equipment = boots;
+                break;
+
+            case CHEST:
+                equipment = chest;
+                break;
+
+            case GLOVES:
+                equipment = gloves;
+                break;
+
+            case HELM:
+                equipment = helm;
+                break;
+
+            case PANTS:
+                equipment = pants;
+                break;
+
+            case WEAPON:
+                equipment = weapon;
+                break;
+        }
+
+        return equipment;
+
     }
 
     public void setStamina(int staminaRemoved) {
