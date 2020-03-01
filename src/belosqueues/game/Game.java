@@ -20,7 +20,7 @@ public class Game {
     private Stage tutorial;
     private Player player;
     private Enemy enemy;
-    private Arena arena = new Arena();
+    private Arena arena;
 
 
     public Game(Player.PlayerClasses playerClasses) {
