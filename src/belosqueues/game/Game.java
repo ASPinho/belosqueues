@@ -49,7 +49,7 @@ public class Game {
 
         if (player.getPos().equals(enemy.getPos())){
             System.out.println("Battle");
-            arena.startBattle();
+         //   arena.startBattle();
         }
     }
 

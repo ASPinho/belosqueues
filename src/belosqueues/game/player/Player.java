@@ -34,6 +34,7 @@ public abstract class Player {
     protected int armor;
     protected int experience;
     protected Picture warlockPic;
+    protected boolean isDead = false;
 
     //Player equipments
     protected Equipment helm = new StarterHelm();
@@ -104,6 +105,14 @@ public abstract class Player {
     public void moveRight(){
         pos.moveCol(1);
         player.translate(CELLSIZE, 0);
+    }
+
+    public boolean getIsDead() {
+        return isDead;
+    }
+
+    public void setIsDead() {
+            isDead = true;
     }
 
     public int getStamina() {
@@ -185,5 +194,6 @@ public abstract class Player {
         public int getIntellect() {
             return intellect;
         }
+
     }
 }

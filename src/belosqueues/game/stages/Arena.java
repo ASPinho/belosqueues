@@ -28,27 +28,62 @@ public class Arena {
 
         System.out.println("The battle is starting!");
 
-        if (player.getStamina() == 0) {
-            System.out.println("You Lost");
+
+        while(!player.getIsDead() && !enemy.getIsDead()) {
+
+            int attackTurn = (int) (Math.random() * 2);
+
+            switch(attackTurn) {
+                case 0:
+                    if(player.getStamina() <= 0) {
+                        player.setIsDead();
+                        break;
+                    }
+                    System.out.println("The enemy has attacked you!");
+                    attackPlayer();
+                    break;
+                case 1:
+                   if(enemy.getStamina() <= 0){
+                        enemy.setIsDead();
+                        break;
+                    }
+                    System.out.println("You have attacked the enemy");
+                    attackEnemy();
+                    break;
+            }
+
         }
 
-        if (enemy.getStamina() == 0) {
-            System.out.println("Enemy died");
-        }
 
-        while (player.getStamina() > 0 && enemy.getStamina() > 0) {
+       /* while (player.getStamina() > 0 && enemy.getStamina() > 0 && !player.getIsDead() && !enemy.getIsDead()) {
+
+            if (player.getStamina() <= 0) {
+                System.out.println("You Lost");
+                player.setIsDead();
+                break;
+            }
+
+            if (enemy.getStamina() <= 0) {
+                System.out.println("Enemy died");
+                enemy.setIsDead();
+                break;
+            }
 
             int attackTurn = (int) Math.ceil(Math.random() * 2);
             System.out.println("attackTurn = " + attackTurn);
 
             int attackT = (attackTurn == 1) ? attackPlayer() : attackEnemy();
 
-        }
+        }*/
+
+
+
 
 
     }
 
     public int attackEnemy(){
+
 
         enemy.setStamina(attack);
         System.out.println("Enemy lost " + attack + " Stamina.\nCurrent Stamina: " + enemy.getStamina() + "\n");

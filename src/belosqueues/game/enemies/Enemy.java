@@ -17,6 +17,7 @@ public abstract class Enemy {
     protected int stamina;
     protected int strength;
     protected int intellect;
+    private boolean isDead = false;
 
     public Enemy (EnemyClasses enemyClass){
         stamina = enemyClass.stamina;
@@ -62,6 +63,14 @@ public abstract class Enemy {
 
     public void setStamina(int staminaRemoved) {
         stamina -= staminaRemoved;
+    }
+
+    public boolean getIsDead() {
+        return isDead;
+    }
+
+    public void setIsDead() {
+        isDead = true;
     }
 
     public enum EnemyClasses {
