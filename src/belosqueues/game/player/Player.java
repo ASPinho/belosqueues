@@ -86,8 +86,6 @@ public abstract class Player {
         }
     }
 
-
-
     public void moveUp(){
         pos.moveRow(-1);
         player.translate(0, -CELLSIZE);
