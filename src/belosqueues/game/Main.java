@@ -14,22 +14,6 @@ public class Main {
 
         Engine.init();
 
-        String pickedClass = scanner.nextLine().toLowerCase();
-
-        switch (pickedClass){
-
-            case "warlock":
-                System.out.println("you've picked the warlock class");
-                break;
-
-            case "warrior":
-                System.out.println("you've picked the warrior class");
-                break;
-
-            default:
-                System.out.println("not a valid class");
-
-        }
 
         //Game master = new Game(Player.PlayerClasses.WARLOCK);
 

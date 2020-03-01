@@ -24,11 +24,11 @@ public class Game {
 
 
     public Game(Player.PlayerClasses playerClasses) {
-        tutorialInit();
-        player = PlayerFactory.newPlayer(playerClasses);
-        enemy = EnemyFactory.newEnemy();
+        //tutorialInit();
+        //player = PlayerFactory.newPlayer(playerClasses);
+        //enemy = EnemyFactory.newEnemy();
 
-        gameFlow();
+        //gameFlow();
     }
 
     public void gameFlow(){
