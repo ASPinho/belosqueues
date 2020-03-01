@@ -27,7 +27,7 @@ public class Game {
         tutorialInit();
         player = PlayerFactory.newPlayer(playerClasses);
         enemy = EnemyFactory.newEnemy();
-
+        arena = new Arena(player, enemy);
         gameFlow();
     }
 
