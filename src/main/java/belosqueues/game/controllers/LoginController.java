@@ -1,4 +1,12 @@
 package belosqueues.game.controllers;
 
-public class LoginController {
+/**
+ * Login Controller
+ */
+public class LoginController extends AbstractController {
+
+    public void init() {
+        view.show();
+    }
+
 }
