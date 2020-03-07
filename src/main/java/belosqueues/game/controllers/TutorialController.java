@@ -1,4 +1,12 @@
 package belosqueues.game.controllers;
 
-public class TutorialController {
+/**
+ * Tutorial Controller
+ */
+public class TutorialController extends AbstractController {
+
+    public void init() {
+        view.show();
+    }
+
 }

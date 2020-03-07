@@ -16,4 +16,15 @@ public class Main {
 
     }
 
+    /**
+     * Bootstrap instantiation
+     */
+    private void bootStrap() {
+
+        Bootstrap bootstrap = new Bootstrap();
+
+    }
+
+
+
 }

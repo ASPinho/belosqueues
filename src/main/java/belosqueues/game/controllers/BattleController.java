@@ -1,4 +1,11 @@
 package belosqueues.game.controllers;
 
-public class BattleController {
+/**
+ * Battle Controller
+ */
+public class BattleController extends AbstractController {
+
+    public void init() {
+        view.show();
+    }
 }

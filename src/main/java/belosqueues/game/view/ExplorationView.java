@@ -1,4 +1,19 @@
 package belosqueues.game.view;
 
-public class ExplorationView {
+import belosqueues.game.controllers.ExplorationController;
+
+/**
+ * Exploration View
+ */
+public class ExplorationView extends AbstractView {
+
+    private ExplorationController explorationController;
+
+    public void setExplorationController(ExplorationController explorationController) {
+        this.explorationController = explorationController;
+    }
+
+    public void show() {
+
+    }
 }

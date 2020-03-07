@@ -1,4 +1,11 @@
 package belosqueues.game.controllers;
 
-public class CraftController {
+/**
+ * Craft Controller
+ */
+public class CraftController extends AbstractController {
+
+    public void init() {
+        view.show();
+    }
 }

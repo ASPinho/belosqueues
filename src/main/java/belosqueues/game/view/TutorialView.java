@@ -1,4 +1,19 @@
 package belosqueues.game.view;
 
-public class TutorialView {
+import belosqueues.game.controllers.TutorialController;
+
+/**
+ * Tutorial View
+ */
+public class TutorialView extends AbstractView {
+
+    private TutorialController tutorialController;
+
+    public void setTutorialController(TutorialController tutorialController) {
+        this.tutorialController = tutorialController;
+    }
+
+    public void show() {
+
+    }
 }
