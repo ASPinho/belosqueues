@@ -3,8 +3,6 @@ package belosqueues.game.enemies;
 
 import static belosqueues.game.Game.*;
 import belosqueues.game.components.Position;
-import org.academiadecodigo.simplegraphics.graphics.Color;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 
 public abstract class Enemy {

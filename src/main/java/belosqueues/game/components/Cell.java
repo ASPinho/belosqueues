@@ -1,7 +1,6 @@
 package belosqueues.game.components;
 
 import belosqueues.game.Game;
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class Cell {
 
