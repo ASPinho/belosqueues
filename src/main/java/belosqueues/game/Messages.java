@@ -30,4 +30,18 @@ public class Messages {
         }
         return classes;
     }
+
+    public static String[] MENU(){
+
+        String[] menu = new String[MenuOptions.values().length];
+
+        for (int i = 0; i < MenuOptions.values().length ; i++) {
+            menu[i] = MenuOptions.values()[i].toString();
+        }
+        return menu;
+    }
+
+    public static final String CHOOSE_MENU = "#######################################\n"
+                                     .concat("#======= Choose your next step  ======#\n")
+                                     .concat("#######################################");
 }

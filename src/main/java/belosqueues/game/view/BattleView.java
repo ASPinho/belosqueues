@@ -1,5 +1,6 @@
 package belosqueues.game.view;
 
+import belosqueues.game.controllers.Controller;
 import belosqueues.game.controllers.LoginController;
 
 /**
@@ -7,13 +8,14 @@ import belosqueues.game.controllers.LoginController;
  */
 public class BattleView extends AbstractView {
 
-    private LoginController loginController;
+    Controller batlleController;
 
-    public void setLoginController(LoginController loginController) {
-        this.loginController = loginController;
-    }
 
     public void show() {
 
+    }
+
+    public void setBatlleController(Controller batlleController) {
+        this.batlleController = batlleController;
     }
 }
