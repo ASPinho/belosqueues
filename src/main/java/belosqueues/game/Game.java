@@ -24,11 +24,8 @@ public class Game {
 
     public static void main(String[] args) {
 
-        System.out.println(INTRO);
-
-        LoginView loginView = new LoginView();
-        loginView.show();
-
+    Game game = new Game();
+    game.bootStrap();
 
     }
 

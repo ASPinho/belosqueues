@@ -1,6 +1,9 @@
 package belosqueues.game.view;
 
 import belosqueues.game.controllers.TutorialController;
+import org.academiadecodigo.bootcamp.scanners.menu.MenuInputScanner;
+
+import static belosqueues.game.Messages.*;
 
 /**
  * Tutorial View
@@ -14,6 +17,13 @@ public class TutorialView extends AbstractView {
     }
 
     public void show() {
+
+        MenuInputScanner classMenuScanner = new MenuInputScanner(MENU());
+        classMenuScanner.setMessage(CHOOSE_MENU);
+
+        int choice = prompt.getUserInput(classMenuScanner);
+
+        tutorialController.run(choice);
 
     }
 }

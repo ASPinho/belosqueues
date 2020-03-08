@@ -19,16 +19,20 @@ public class LoginView extends AbstractView {
 
     public void show() {
 
+        System.out.println(INTRO);
+
         StringInputScanner nameScanner = new StringInputScanner();
         nameScanner.setMessage(CHOOSE_NAME);
 
         String name = prompt.getUserInput(nameScanner);
+
 
         MenuInputScanner classMenuScanner = new MenuInputScanner(CLASSES());
         classMenuScanner.setMessage(CHOOSE_CLASS);
 
         int choice = prompt.getUserInput(classMenuScanner);
 
+        loginController.createANewPlayer(name, choice);
 
     }
 }
