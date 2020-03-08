@@ -2,18 +2,18 @@ package belosqueues.game.player;
 
 public class PlayerFactory {
 
-    public static Player newPlayer(Player.PlayerClasses playerClasses){
+    public Player newPlayer(String name, Player.PlayerClasses playerClasses){
 
         Player player = null;
 
         switch (playerClasses){
 
             case WARLOCK:
-                player = new Warlock();
+                player = new Warlock(name);
                 break;
 
             case WARRIOR:
-                player = new Warrior();
+                player = new Warrior(name);
                 break;
         }
 

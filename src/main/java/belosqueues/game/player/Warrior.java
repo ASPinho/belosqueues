@@ -4,8 +4,8 @@ import belosqueues.game.enemies.Enemy;
 
 public class Warrior extends Player {
 
-    public Warrior(){
-        super(PlayerClasses.WARRIOR);
+    public Warrior(String name){
+        super(name, PlayerClasses.WARRIOR);
     }
 
     @Override

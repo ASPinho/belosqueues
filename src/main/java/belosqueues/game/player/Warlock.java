@@ -4,8 +4,8 @@ import belosqueues.game.enemies.Enemy;
 
 public class Warlock extends Player {
 
-    public Warlock(){
-        super(PlayerClasses.WARLOCK);
+    public Warlock(String name){
+        super(name, PlayerClasses.WARLOCK);
     }
 
     @Override
