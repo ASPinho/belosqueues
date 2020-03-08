@@ -9,4 +9,7 @@ public abstract class AbstractController implements Controller {
 
     protected View view;
 
+    public void setView(View view) {
+        this.view = view;
+    }
 }

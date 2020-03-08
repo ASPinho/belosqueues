@@ -1,7 +1,5 @@
 package belosqueues.game.components;
 
-import belosqueues.game.Game;
-
 public class Cell {
 
     private Position pos;

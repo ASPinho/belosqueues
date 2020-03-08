@@ -16,7 +16,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>belosqueues.game.Main</mainClass>
+                            <mainClass>belosqueues.game.Game</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

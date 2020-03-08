@@ -1,7 +1,6 @@
 package belosqueues.game.enemies;
 
 
-import static belosqueues.game.Game.*;
 import belosqueues.game.components.Position;
 
 
