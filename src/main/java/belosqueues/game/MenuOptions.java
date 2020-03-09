@@ -13,6 +13,6 @@ public enum MenuOptions {
     }
 
     public int getOption(){
-        return this.option;
+        return option;
     }
 }
