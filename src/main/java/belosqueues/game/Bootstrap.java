@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class Bootstrap {
 
-    public GameEngine init(){
+    public void init(){
 
         PlayerService playerService = new PlayerServiceImplementation();
         ArenaService arenaService = new ArenaServiceImplementation();
@@ -56,8 +56,6 @@ public class Bootstrap {
         tutorialController.setControllerMap(controllerMap);
 
         loginController.init();
-
-        return new GameEngine();
     }
 
 
